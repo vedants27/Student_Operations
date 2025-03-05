@@ -53,6 +53,30 @@ class Main {
                     operations.displayStudents();
                     break;
 
+                case 3: // Search Student by PRN
+                    System.out.print("Enter PRN to search: ");
+                    prn = Long.parseLong(scan.nextLine());
+                    Student foundByPrn = operations.searchByPRN(prn);
+                    if (foundByPrn != null) {
+                        foundByPrn.display();
+                    } else {
+                        System.out.println("Student not found.");
+                    }
+                    break;
+
+                case 4: // Search Student by Name
+                    System.out.print("Enter Name to search: ");
+                    name = scan.nextLine();
+                    Student foundByName = operations.searchByName(name);
+                    if (foundByName != null) {
+                        foundByName.display();
+                    } else {
+                        System.out.println("Student not found.");
+                    }
+                    break;
+
+
+
 
 
     }
