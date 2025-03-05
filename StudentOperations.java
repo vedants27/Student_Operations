@@ -20,6 +20,30 @@ class StudentOperations {
             student.display();
         }
     }
+
+    // Search Student by PRN
+    public Student searchByPRN(long prn) {
+        for (Student student : students) {
+            if (student.getPRN() == prn) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    // Search Student by Name
+    public Student searchByName(String name) {
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+
+
+    
  
     }
 }
